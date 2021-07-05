@@ -17,14 +17,14 @@ while running:
             running = False
         elif event.type == KEYDOWN:
             if event.key == K_SPACE:
-                mario.switch_animation(mario.jump_anim)
+                mario.change_animation(mario.jump_anim)
             elif event.key == K_a:
-                mario.switch_animation(mario.idle_anim)
+                mario.change_animation(mario.idle_anim)
             elif event.key == K_d:
-                mario.switch_animation(mario.run_anim)
+                mario.change_animation(mario.run_anim)
 
     screen.fill([0, 0, 0])
-    mario.animate()
+    mario.update()
     mario.draw(screen)
     pygame.display.flip()
     clock.tick(60)

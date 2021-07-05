@@ -16,7 +16,7 @@ class Mario:
         self.rect = self.image.get_rect()
         self.rect = pygame.Rect(x, y, self.rect.width, self.rect.height)
 
-    def animate(self):
+    def update(self):
         self.anim_index += 0.2
 
         if self.anim_index >= len(self.current_anim):
@@ -24,7 +24,7 @@ class Mario:
 
         self.image = self.current_anim[int(self.anim_index)]
 
-    def switch_animation(self, animation):
+    def change_animation(self, animation):
         self.current_anim = animation
 
     def load_sprites(self):
